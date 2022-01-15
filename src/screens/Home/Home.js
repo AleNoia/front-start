@@ -1,6 +1,9 @@
 import React from "react";
+import useStyles from "./useStyles";
 
 function Home() {
-  return <h1>Olá</h1>;
+  const classes = useStyles();
+
+  return <section className={classes.firstSection}>ooi</section>;
 }
 export default Home;
