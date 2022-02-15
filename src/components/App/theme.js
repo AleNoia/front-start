@@ -3,6 +3,19 @@ import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 const theme = (mode) =>
   responsiveFontSizes(
     createTheme({
+      overrides: {
+        MuiCssBaseline: {
+          "@global": {
+            "*": {
+              "scrollbar-width": "thin",
+            },
+            "*::-webkit-scrollbar": {
+              width: "4px",
+              height: "4px",
+            },
+          },
+        },
+      },
       palette: {
         mode,
         primary: {
